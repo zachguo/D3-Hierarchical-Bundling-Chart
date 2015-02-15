@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="hbc.js"></script>
+</head>
+
+<body>
+  <script>
+    // if you see nothing in browser, then you have to host the folder on a server,
+    // or you can open it directly in latest Firefox which allow Cross origin requests.//
+    var yourStyles = {
+      // angle: 270,
+      // tension: 0.6,
+      // sort: 0,
+      // backgroundColor: "#F5F7FA",
+      // linkColor: "#CCD1D9",
+      rollupColName: "salesAmount",
+      rollupColNameTooltip: "Total Sales Amount",
+      // groupColNamesAllExcept: ["salesAmount", "dealerName"],
+      // groupColNames: ["dealerName", "location"],
+      groupColNamesMap: {
+        "dealerName": "Dealer Name",
+        "location": "City",
+        "series": "Series",
+        "bank": "Bank"
+      },
+      groupColColorsMap: {
+        "dealerName": "#FFCE54",
+        "location": "#FC6E51",
+        "series": "#A0D468",
+        "bank": "#4FC1E9"
+      }
+    };
+    hierarchicalBundlingChart("body", "sample.json", yourStyles);
+  </script>
+</body>
+
+</html>
